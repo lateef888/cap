@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{background-color: lightgray;}
+        h1{text-align: center;font-size: 30px}
+        nav{font-size: 30px;}
+        button{font-size: 25px;}
+        button.UPIG{font-size: 15px;}
+        p.date{text-align: right;line-height:;}
+        p.lk{font: 35px;}
+        option.rsf{font: bold}
+        input.lk{font-size: 25px;}
+        input[type='number']{width: 80px;} 
+        
+        pre.CAPP{line-height: .6;}
+    </style>
+<script>
+    
+function multiply(){
+var a1,a2,a3,b1,b2,b3,c1,c2,c3,d1,d2,d3,e1,e2,e3,f11,f22,f33,g1,g2,g3,h1,h2,h3,i1,i2,i3,total,sar,cps,marg,sp;
+a1=Number(document.getElementById("f1").value);
+a2=Number(document.getElementById("s1").value);
+a3= a1 * a2;
+document.getElementById("answer1").value= a3;
+    
+b1=Number(document.getElementById("f2").value);
+b2=Number(document.getElementById("s2").value);
+b3= b1 * b2;
+document.getElementById("answer2").value= b3;
+
+c1=Number(document.getElementById("f3").value);
+c2=Number(document.getElementById("s3").value);
+c3= c1 * c2;
+document.getElementById("answer3").value= c3;
+    
+d1=Number(document.getElementById("f4").value);
+d2=Number(document.getElementById("s4").value);
+d3= d1 * d2;
+document.getElementById("answer4").value= d3;
+    
+e1=Number(document.getElementById("f5").value);
+e2=Number(document.getElementById("s5").value);
+e3= e1 * e2;
+document.getElementById("answer5").value= e3;
+    
+f11=Number(document.getElementById("f6").value);
+f22=Number(document.getElementById("s6").value);
+f33= f11 * f22;
+document.getElementById("answer6").value= f33;
+
+g1=Number(document.getElementById("f7").value);
+g2=Number(document.getElementById("s7").value);
+g3= g1 * g2;
+document.getElementById("answer7").value= g3;
+
+h1=Number(document.getElementById("f8").value);
+h2=Number(document.getElementById("s8").value);
+h3= h1 * h2;
+document.getElementById("answer8").value= h3;
+
+i1=Number(document.getElementById("f9").value);
+i2=Number(document.getElementById("s9").value);
+i3= i1 * i2;
+document.getElementById("answer9").value= i3;
+
+    
+    total=a3+b3+c3+d3+e3+f33+g3+h3+i3;
+    document.getElementById("answer99").value= total;
+    
+    sar=Number(document.getElementById("z").value);
+    document.getElementById("answerz").value= sar;
+    
+    cps=total/sar;
+    var cpsr=Math.ceil(cps);
+    document.getElementById("answern").value= cpsr;
+    
+    marg=Number(document.getElementById("mar").value);
+    document.getElementById("answerm").value= marg;
+    
+    sp=cps/(1-marg/100);
+    var spr=Math.ceil(sp);
+    document.getElementById("answersp").value= spr;
+
+    
+    
+}
+</script>
+</head>
+<body>
+    <h1>Cost &amp; Selling Price Calculation</h1>
+    <p class="date"> <span id="datetime"></span></p>
+<script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +"<br>"+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+</script>
+    <form><pre class="CAPP">
+        <b>
+            
+<h2 class="lk">Karigar/Loom No.(L/K) <input class="lk" id="loom" ></h2><br>
+        
+<p>                Qnty           Rate                Total</p>
+1. Resham       :<input type="number" id="f1" size="10">x<input type="number" id="s1" size="10">Rs.<input id="answer1" size="12" readonly><br>
+2. <select><option class="rsf">Chiniya</option><option class="rsf">Saffe</option></select>     :<input type="number" id="f2" size="10">x<input type="number" id="s2" size="10">Rs.<input id="answer2" size="12" readonly><br>
+3. Zari <select><option>20</option><option>30</option><option>30R</option><option>50</option><option>VRD</option><option>Silver</option></select> :<input type="number" id="f3" size="10">x<input type="number" id="s3" size="10">Rs.<input id="answer3"  size="12" readonly><br>
+4. Zari <select><option>30</option><option>20</option><option>30R</option><option>50</option><option>VRD</option><option>Silver</option></select> :<input type="number" id="f4" size="10">x<input type="number" id="s4" size="10">Rs.<input id="answer4"  size="12" readonly><br>
+5. Zari <select><option>50</option><option>20</option><option>30</option><option>30R</option><option>VRD</option><option>Silver</option></select> :<input type="number" id="f5" size="10">x<input type="number" id="s5" size="10">Rs.<input id="answer5"  size="12" readonly><br>
+6. Dupion       :<input type="number" id="f8" size="10">x<input type="number" id="s8" size="10">Rs.<input id="answer8"  size="12" readonly><br>
+7. Katan        :<input type="number" id="f6" size="10">x<input type="number" id="s6" size="10">Rs.<input id="answer6"  size="12" readonly><br>
+8. T.P.M        :<input type="number" id="f9" size="10">x<input type="number" id="s9" size="10">Rs.<input id="answer9"  size="12" readonly><br>
+9. Bani         :<input type="number" id="f7" size="10">x<input type="number" id="s7" size="10">Rs.<input id="answer7"  size="12" readonly><br>
+Total Saree     :<input type="number" id="z"  size="10" ><br>
+Margin          :<input type="number" id="mar" size="10"> &#37;<br>
+    
+    </b>
+    </pre></form>
+<button onclick="multiply()">&nbsp;&nbsp;&nbsp;Calculate&nbsp;&nbsp;&nbsp;</button>
+    <br><br>
+    
+<pre class="CAPP"><b>
+Total Cost :    Rs.<input id="answer99" size="12" readonly><br>
+Total Saree:    Rs.<input id="answerz" size="12" readonly><br>
+Cost/Saree :    Rs.<input id="answern" size="12" readonly><br>
+Margin     :       <input id="answerm" size="12" readonly> %<br>
+Selling Price:  Rs.<input id="answersp" size="12" readonly><br>
+
+    <!-- image UPLOAD -->
+    
+  </b></pre>
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><button class="UPIG"><label for="file" style="cursor: pointer;">Upload Image</label></button></p>
+<p><img id="output" width="250" /></p>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+    
+};
+</script>
+    <nav> <a href="Menu.html" target="_top">Go to Menu</a></nav>
+    </body>
+</html>
